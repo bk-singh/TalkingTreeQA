@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%  block title %} Talking Tree {% endblock %}
+</title>
+
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'talkingtree/style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'talkingtree:question' %}">
+          <span  class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>TalkingTree</a>
+    </div>
+    <ul class="nav navbar-nav ">
+      <li> <a class="navbar-brand" href="{% url 'talkingtree:question' %}">
+          Questions  <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+      </a></li>
+    </ul>
+      <form class="navbar-form navbar-left" role="search" method="get" action="#">
+        <input type="text" class="form-control" name = "q" value="" placeholder="search a question">
+         <button class="form-control btn btn-info" name = "searchBtn" >Search Question
+         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+         </button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+          <li>
+                <a class="navbar-brand" src="#">
+                  Login  <span  class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+          </li>
+
+      </ul>
+  </div>
+</nav>
+<div style="margin: 5px 150px 150px 150px">
+    {% block body %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

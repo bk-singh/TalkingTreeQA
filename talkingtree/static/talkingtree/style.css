@@ -1,0 +1,14 @@
+.wellDiv{
+    border: 5px solid blue;
+    background-color:  lightgrey;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+}
+
+.margin1{
+    margin: 10px ;
+}

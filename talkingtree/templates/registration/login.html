@@ -1,0 +1,31 @@
+     {% extends 'talkingtree/base.html' %}
+     {%  block title %} Login to TalkingTree {% endblock %}
+     {%  block question_active %} active{% endblock %}
+     {%  block body %}
+         {% if user.is_authenticated %}
+             <div class="panel panel-default">
+             <div class="panel-body">
+                          You are loggedin as {{ user.username }}!
+             </div>
+             <div class="panel-body">
+                    <a  href="{% url 'talkingtree:logout' %}">
+                        You are not {{ user.username }}. Logout </span>
+                    </a>
+             </div>
+             </div>
+         {% else %}
+             <div class="panel panel-default">
+                 <div class="panel-body">
+                     <h2>Login</h2>
+                            <form method="post">
+                              {% csrf_token %}
+                              {{ form.as_p }}
+                              <button type="submit">Login</button>
+                            </form>
+                        </div>
+                     </div>
+                      <div class="margin1">
+                          <a href="{%  url 'talkingtree:register' %}"> New user register here </a>
+                      </div>
+                    {% endif %}
+     {% endblock %}

@@ -1,0 +1,22 @@
+
+ {% extends 'talkingtree/base.html' %}
+ {%  block title %} Login to TalkingTree {% endblock %}
+ {%  block question_active %} active{% endblock %}
+ {%  block body %}
+
+
+    <div class="alert alert-success">
+        You are successfully logged out.
+    </div>
+     <div class="well">
+        <div>
+            <a href="{%  url 'talkingtree:login' %}"> Login Again </a>
+        </div>
+         <br>
+         <div>
+            <a href="{%  url 'talkingtree:register' %}">  New user register here  </a>
+         </div>
+     </div>
+
+
+ {% endblock %}

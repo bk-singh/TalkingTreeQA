@@ -1,0 +1,46 @@
+ {% extends 'talkingtree/base.html' %}
+ {%  block title %} Create a New Account {% endblock %}
+ {%  block question_active %} active{% endblock %}
+ {%  block body %}
+         {% if user.is_authenticated %}
+             <div class="panel panel-default">
+             <div class="panel-body">
+                          You are loggedin as {{ user.username }}!
+             </div>
+             <div class="panel-body">
+                    <a  href="{% url 'talkingtree:logout' %}">
+                        You are not {{ user.username }}. Logout </span>
+                    </a>
+             </div>
+             </div>
+         {% else %}
+    <h3> Create a New Account </h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-7">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-horizontal" action="" method="post">
+                            {% csrf_token %}
+                                {% include 'talkingtree/form-template.html' %}
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-8">
+                                    <button class="btn btn-success" > Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="">
+                <div class="col-sm-offset-2 col-md-8">
+                    <a href="{% url 'talkingtree:login' %}">Existing user Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  {% endif %}
+ {% endblock %}
+
