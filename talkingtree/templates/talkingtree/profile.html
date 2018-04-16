@@ -2,49 +2,35 @@
  {%  block title %} My Profile Page {% endblock %}
  {%  block body %}
     {% if profile %}
+
         <h1> User Details:</h1>
         <div class="well">
             <h3>User Name: {{ profile.username }}</h3>
-            <h3>First Name:
+            <h4>First Name:
                 {% if profile.first_name %}
                     {{ profile.first_name }}
                     {% else %}
                     No data provided
                     {% endif %}
-                    </h3>
-            <h3>Last Name:
+                    </h4>
+            <h4>Last Name:
                 {% if profile.last_name %}
                     {{ profile.last_name }}
                     {% else %}
                     No data provided
                     {% endif %}
-                    </h3>
-            <h3>Email: {{ profile.email }}</h3>
+                    </h4>
+            <h4>Email: {{ profile.email }}</h4>
         </div>
-        {#        <h2> List of Activities: </h2>#}
-{#        <div class="row">#}
-{#             <div class="col-sm-4"> Questions:</div>#}
-{#             <div class="col-sm-8">question_count</div>#}
-{#        </div>#}
-{#        <div class="row">#}
-{#             <div class="col-sm-4">Answers:</div>#}
-{#             <div class="col-sm-8">answer_count</div>#}
-{#        </div>#}
-{#        <div class="row">#}
-{#             <div class="col-sm-4"></div>#}
-{#             <div class="col-sm-8"></div>#}
-{#        </div>#}
-{##}
-{##}
-{##}
-{#            <div class="well">#}
-{#                 questions:   {{ user.question_count }}#}
-{#            </div>#}
-{##}
-{#        {% else %}#}
-{#        <h3> No answer found.</h3>#}
     {% endif %}
+     <div class="row">
+        <div class="col-sm-4">
+            <a href="{% url 'talkingtree:update_user' profile.id  %}"> Update User details. </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="{% url 'talkingtree:question' %}"> Back to home page</a>
+        </div>
+     </div>
 
-<a href="/talkingtree/"> Back to home page</a>
  {% endblock %}
 

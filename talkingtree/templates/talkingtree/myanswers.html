@@ -1,0 +1,36 @@
+ {% extends 'talkingtree/base.html' %}
+ {%  block title %} Question List {% endblock %}
+ {%  block body %}
+
+    {% if all_answer %}
+        <h2> List of Answers:[{{ count_answer }}] </h2>
+        <ol>
+            {% for answer in all_answer %}
+            <li>
+            <div class="well">
+                <div class="well row" style="margin-left: 5px">
+                    <h3>{{  answer.answer.user  }}</h3>
+                    <div  class="col-sm-9">
+                        <a href="{% url 'talkingtree:comment' answer.answer.id %}"> {{ answer.answer.answer_text }}</a>
+                    </div>
+
+                </div>
+            </div>
+            </li>
+            {% endfor %}
+        </ol>
+
+        {% else %}
+       <div class="alert alert-danger">
+        No answer found. People are searching for a better answer to this question.
+       </div>
+    {% endif %}
+             <div class="well row" style="margin-left: 5px">
+
+                <div  class="col-sm-3">
+                    <a href="/talkingtree/"> Back to home page  <span  class="glyphicon glyphicon-home" aria-hidden="true"> </span></a>
+                </div>
+            </div>
+
+ {% endblock %}
+

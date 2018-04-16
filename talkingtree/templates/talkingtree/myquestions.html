@@ -1,0 +1,27 @@
+ {% extends 'talkingtree/base.html' %}
+ {%  block title %} Question List {% endblock %}
+ {%  block body %}
+     {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'talkingtree/style.css' %}">
+
+     {% if not user.is_authenticated %}
+     <div class="well">
+         <p><strong>TalkingTree </strong> is a place to share knowledge and better understand the world. You can ask a question and you can give answer to others questions ans you can also comment on an answer.</p>
+     </div>
+    {% endif %}
+
+     <h1> List of Questions </h1> [ Ordered by : Most recent first ]
+    <ol>
+        {% for question in all_questions %}
+        <li>
+        <div class="well row" style="margin-left: 5px">
+            <div  class="col-sm-9">
+                <a href="{% url 'talkingtree:answer' question.id %}"> {{ question.question_text }}</a>
+                [by: {{ question.user }}] - {{ question.created_date }}
+            </div>
+        </div>
+        </li>
+        {% endfor %}
+    </ol>
+
+ {% endblock %}

@@ -1,6 +1,3 @@
-from django.http import HttpResponse
-from django.template import loader
-from .models import Question, Answer, Comment
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import Http404
 from django.views import generic
@@ -8,11 +5,10 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.contrib.auth import login, authenticate
 from django.views.generic import View
-from .models import Question, Answer, Comment
+from .models import Question, Answer, Comment, Upvoteanswer, Upvotecomment
 from .forms import UserForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-
 
 
 class QuestionView(generic.ListView):
@@ -26,65 +22,172 @@ class QuestionView(generic.ListView):
 
 class QuestionCreate(CreateView):
     model = Question
-    fields = ['user_id','question_text','created_date']
+    fields = ['user','question_text']
     success_url = reverse_lazy('talkingtree:question')
 
 
 class QuestionUpdate(UpdateView):
     model = Question
-    fields = ['user_id','question_text','created_date']
+    fields = ['user','question_text']
     success_url = reverse_lazy('talkingtree:question')
 
 
 class QuestionDelete(DeleteView):
     model = Question
-    fields = ['user_id','question_text','created_date']
+    fields = ['user','question_text']
     success_url = reverse_lazy('talkingtree:question')
+
+
+class AnswerView(generic.ListView):
+    template_name = 'talkingtree/index.html'
+    context_object_name = 'all_answer'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return Answer.objects.all()
 
 
 class AnswerCreate(CreateView):
-    def get_queryset(self):
-        model = Answer
-        question = Question.objects.get(pk=self.kwargs['pk'])
-        fields = ['question', 'answer_text', 'created_date', 'upvotes', 'downvotes']
-        template_name = 'talkingtree:question'
-        # self.question = get_object_or_404(Question, name=self.args[0])
-        return Answer.objects.filter(question=question)
-
-
-class CommentCreate(CreateView):
-    model = Question
-    fields = ['answer','comment_text','created_date',]
+    model = Answer
+    fields = ['question', 'user', 'answer_text']
     success_url = reverse_lazy('talkingtree:question')
 
 
-# def question(request):
-#     all_question = Question.objects.all()
-#     context = { 'all_question' : all_question }
-#     return render(request, 'talkingtree/index.html', context)
+class AnswerDelete(DeleteView):
+    model = Answer
+    fields = ['question', 'user', 'answer_text', 'created_date', 'upvotes', 'downvotes']
+    success_url = reverse_lazy('talkingtree:question')
 
 
-# class AnswerView(generic.ListView):
-#     template_name = 'talkingtree/answer.html'
-#     context_object_name = 'answer'
-#     question = Question.objects.get(pk=question_id)
-#     all_answer = Answer.objects.filter(question_id=question_id)
-#     count_answer = question.answer_set.count();
-#     answer = { 'question' : question, 'all_answer': all_answer, 'count_answer': count_answer }
-#     def get_queryset(self):
-#         return answer
+class AnswerUpdate(UpdateView):
+    model = Answer
+    fields = ['question', 'user', 'answer_text']
+    success_url = reverse_lazy('talkingtree:question')
 
 
-# @login_required
+class CommentCreate(CreateView):
+    model = Comment
+    fields = ['answer', 'user', 'comment_text',]
+    success_url = reverse_lazy('talkingtree:question')
+
+
+class CommentDelete(DeleteView):
+    model = Comment
+    fields = ['answer', 'user', 'comment_text','created_date',]
+    success_url = reverse_lazy('talkingtree:question')
+
+
+class CommentUpdate(UpdateView):
+    model = Comment
+    fields = ['answer', 'user', 'comment_text',]
+    success_url = reverse_lazy('talkingtree:question')
+
+
 def answer(request, question_id):
     try:
-
         question = Question.objects.get(pk=question_id)
         all_answer = Answer.objects.filter(question_id=question_id)
         count_answer = question.answer_set.count();
+        count_upvoteanswer = Upvoteanswer.objects.filter(upvote=True).count()
+        count_downvoteanswer = Upvoteanswer.objects.filter(upvote=False).count()
+        answers = []
+        for item in all_answer:
+            count_upvoteanswer = Upvoteanswer.objects.filter(upvote=True, answer=item).count()
+            count_downvoteanswer = Upvoteanswer.objects.filter(upvote=False, answer=item).count()
+            answers.append({
+                'answer':item,
+                'count_upvoteanswer':count_upvoteanswer,
+                'count_downvoteanswer':count_downvoteanswer
+            })
+
     except Question.DoesNotExist:
         raise Http404('Answer Does not Exist.')
-    return render(request, 'talkingtree/answer.html', { 'question' : question, 'all_answer': all_answer, 'count_answer': count_answer })
+    return render(request, 'talkingtree/answer.html', {
+        'question' : question, 'all_answer': answers, 'count_answer': count_answer, 'count_upvoteanswer': count_upvoteanswer ,'count_downvoteanswer':count_downvoteanswer})
+
+
+@login_required
+def myanswers(request):
+    try:
+        all_answer = Answer.objects.filter(user=request.user)
+        count_answer = all_answer.count()
+        answers = []
+        for item in all_answer:
+            count_upvoteanswer = Upvoteanswer.objects.filter(upvote=True, answer=item).count()
+            count_downvoteanswer = Upvoteanswer.objects.filter(upvote=False, answer=item).count()
+            answers.append({
+                'answer':item,
+                'count_upvoteanswer':count_upvoteanswer,
+                'count_downvoteanswer':count_downvoteanswer
+            })
+
+    except Question.DoesNotExist:
+        raise Http404('Answer Does not Exist.')
+    return render(request, 'talkingtree/myanswers.html', {
+       'all_answer': answers, 'count_answer': count_answer, 'count_upvoteanswer': count_upvoteanswer ,'count_downvoteanswer':count_downvoteanswer})
+
+
+@login_required
+def myquestions(request):
+    try:
+        all_questions = Question.objects.filter(user=request.user)
+        count_question= all_questions.count()
+
+    except Question.DoesNotExist:
+        raise Http404('Answer Does not Exist.')
+    return render(request, 'talkingtree/myquestions.html', {
+       'all_questions': all_questions, 'count_question': count_question,})
+
+
+@login_required
+def create_answer(request, question_id):
+    user = get_object_or_404(User, username=request.user)
+    question = get_object_or_404(Question, pk=question_id)
+    answer_text= 'ans from backend'
+    try:
+        question = Question.objects.get(answer__id=answer_id)
+        answer = Answer.objects.get(user = user, question=question)
+    except Answer.DoesNotExist:
+        answer = Answer(upvote=True, user = user, question=question, answer_text=answer_text)
+        answer.save()
+    return redirect('talkingtree:question')
+
+
+
+@login_required
+def create_upvoteanswer(request, answer_id):
+    user = get_object_or_404(User, username=request.user)
+    answer = get_object_or_404(Answer, pk=answer_id)
+    try:
+        question = Question.objects.get(answer__id=answer_id)
+        upvoteanswer = Upvoteanswer.objects.get(user = user, answer=answer)
+        if(upvoteanswer.upvote == True):
+            upvoteanswer.upvote = None
+        else:
+            upvoteanswer.upvote = True
+        upvoteanswer.save()
+    except Upvoteanswer.DoesNotExist:
+        upvoteanswer = Upvoteanswer(upvote=True, user = user, answer=answer)
+        upvoteanswer.save()
+    return redirect('talkingtree:answer', question.id)
+
+
+@login_required
+def create_downvoteanswer(request, answer_id):
+    user = get_object_or_404(User, username=request.user)
+    answer = get_object_or_404(Answer, pk=answer_id)
+    try:
+        question = Question.objects.get(answer__id=answer_id)
+        upvoteanswer = Upvoteanswer.objects.get(user = user, answer=answer)
+        if(upvoteanswer.upvote == False):
+            upvoteanswer.upvote = None
+        else:
+            upvoteanswer.upvote = False
+        upvoteanswer.save()
+    except Upvoteanswer.DoesNotExist:
+        upvoteanswer = Upvoteanswer(upvote=False, user = user, answer=answer)
+        upvoteanswer.save()
+    return redirect('talkingtree:answer', question.id)
 
 
 # @login_required
@@ -95,13 +198,60 @@ def comment(request, answer_id):
         question = Question.objects.filter(answer__id=answer_id)
         all_comment = Comment.objects.filter(answer = answer)
         count_comment = answer.comment_set.count();
+        comments = []
+        for item in all_comment:
+            count_upvotecomment = Upvotecomment.objects.filter(upvote=True, comment=item).count()
+            count_downvotecomment = Upvotecomment.objects.filter(upvote=False, comment=item).count()
+            comments.append({
+                'comment':item,
+                'count_upvotecomment':count_upvotecomment,
+                'count_downvotecomment':count_downvotecomment
+            })
+
     except Question.DoesNotExist:
         raise Http404('comment Does not Exist.')
-    return render(request, 'talkingtree/comment.html', { 'question':question, 'answer' : answer, 'all_comment': all_comment, 'count_comment':count_comment })
+    return render(request, 'talkingtree/comment.html', { 'question':question, 'answer' : answer,
+                                                         'all_comment': comments, 'count_comment':count_comment,
+                                                         })
+
+
+@login_required
+def create_upvotecomment(request, comment_id):
+    user = get_object_or_404(User, username=request.user)
+    comment = get_object_or_404(Comment, pk=comment_id)
+    try:
+        answer = Answer.objects.get(comment__id=comment_id)
+        upvotecomment = Upvotecomment.objects.get(user = user, comment=comment)
+        if(upvotecomment.upvote == True):
+            upvotecomment.upvote = None;
+        else:
+            upvotecomment.upvote = True
+        upvotecomment.save()
+    except Upvotecomment.DoesNotExist:
+        upvotecomment = Upvotecomment(upvote=True, user = user, comment=comment)
+        upvotecomment.save()
+    return redirect('talkingtree:comment', answer.id)
+
+
+@login_required
+def create_downvotecomment(request, comment_id):
+    user = get_object_or_404(User, username=request.user)
+    comment = get_object_or_404(Comment, pk=comment_id)
+    try:
+        answer = Answer.objects.get(comment__id=comment_id)
+        upvotecomment = Upvotecomment.objects.get(user = user, comment=comment)
+        if(upvotecomment.upvote == False):
+            upvotecomment.upvote = None
+        else:
+            upvotecomment.upvote = False
+        upvotecomment.save()
+    except Upvotecomment.DoesNotExist:
+        upvotecomment = Upvotecomment(upvote=False, user = user, comment=comment)
+        upvotecomment.save()
+    return redirect('talkingtree:comment', answer.id)
+
 
 # User Authentication
-
-
 class UserFormView(View):
     form_class = UserForm
     template_name = 'talkingtree/registration_form.html'
@@ -116,11 +266,7 @@ class UserFormView(View):
             user = form.save(commit=False)
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
             user.set_password(password)
-            # user.first_name = 'BK'
-            # user.last_name = 'Singh'
             user.save()
 
             user = authenticate(username='username', password='password')
@@ -128,25 +274,20 @@ class UserFormView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('talkingtree:question')
-        return render(request, self.template_name, {'form': form })
+        return redirect('talkingtree:login')
 
-#
-# def login(request):
-#     try:
-#         del request.session['username']
-#     except:
-#         pass
-#     return render(request, 'talkingtree/login.html')
-#
-# def logout(request):
-#     try:
-#         del request.session['username']
-#     except:
-#         pass
-#     return render(request, 'talkingtree/logout.html')
 
-def your_view(request):
+class UserUpdate(UpdateView):
+    model = User
+    fields = ['first_name', 'last_name', 'username',]
+    template_name = 'talkingtree/user_update.html'
+    slug_field = 'username'
+    slug_url_kwarg = 'slug'
+    success_url = reverse_lazy('talkingtree:profile')
+
+
+def profile_view(request):
     template_name = 'talkingtree/profile.html'
     a = User.objects.get(username= request.user)
-     # profile = a.get_profile()
     return render(request, template_name, {'profile': a})
+

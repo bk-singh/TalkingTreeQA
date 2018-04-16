@@ -14,9 +14,7 @@
 
     </head>
     <body>
-
-
-
+<1>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -47,8 +45,14 @@
 
                     {% if user.is_authenticated %}
                        <li>
-                           <a class="navbar-brand" href="{% url 'talkingtree:question' %}">
+                           <a class="navbar-brand" href="{% url 'talkingtree:myquestions' %}">
                                 My Questions
+                                <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                            </a>
+                       </li>
+                        <li>
+                           <a class="navbar-brand" href="{% url 'talkingtree:myanswers' %}">
+                                My Answers
                                 <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                             </a>
                        </li>

@@ -1,1 +1,28 @@
-{#addAnswer#}
+ {% extends 'talkingtree/base.html' %}
+ {%  block title %} add an Answer  {% endblock %}
+ {%  block answer_active %} active{% endblock %}
+ {%  block body %}
+
+    <h3> add an Answer </h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-7">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-horizontal" action="" method="post">
+                            {% csrf_token %}
+                                {% include 'talkingtree/form-template.html' %}
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-8">
+                                    <button class="btn btn-success" > Submit Answer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ {% endblock %}
+
