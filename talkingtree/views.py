@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, render_to_response
 from django.http import Http404
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -6,9 +6,12 @@ from django.core.urlresolvers import reverse, reverse_lazy
 from django.contrib.auth import login, authenticate
 from django.views.generic import View
 from .models import Question, Answer, Comment, Upvoteanswer, Upvotecomment
-from .forms import UserForm
+from .forms import UserForm, NewQuestionForm
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
+from django.template import RequestContext
+from django.views.decorators.csrf import csrf_protect
 
 
 class QuestionView(generic.ListView):
@@ -22,8 +25,23 @@ class QuestionView(generic.ListView):
 
 class QuestionCreate(CreateView):
     model = Question
-    fields = ['user','question_text']
+    fields = ['user', 'question_text']
     success_url = reverse_lazy('talkingtree:question')
+
+
+class QuestionCreate1(View):
+
+    def get(self, request):
+        form = NewQuestionForm()
+        variables = RequestContext(request, {'form': form, 'request':request})
+        return render_to_response('talkingtree/question_form.html', {'form': form, 'request':request})
+
+    @method_decorator(csrf_protect, name='dispatch')
+    def post(self, request):
+        form = NewQuestionForm(request.POST)
+        if form.is_valid():
+            question = Question.objects.create(user=request.user,question_text = form.cleaned_data['question_text'])
+        return render(request, 'talkingtree/',)
 
 
 class QuestionUpdate(UpdateView):

@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$', views.QuestionView.as_view(), name='question'),
     url(r'^myquestions/$', views.myquestions, name='myquestions'),
     url(r'^question/add/$', views.QuestionCreate.as_view(), name='add-question'),
+    # url(r'^question/add1/$', views.QuestionCreate1.as_view(), name='add-question1'),
     url(r'^question/(?P<pk>[0-9]+)/$', views.QuestionUpdate.as_view(), name='update-question'),
     url(r'^question/(?P<pk>[0-9]+)/delete/$', views.QuestionDelete.as_view(), name='delete-question'),
 
