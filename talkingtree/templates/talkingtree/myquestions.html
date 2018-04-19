@@ -16,8 +16,11 @@
         <li>
         <div class="well row" style="margin-left: 5px">
             <div  class="col-sm-9">
-                <a href="{% url 'talkingtree:answer' question.id %}"> {{ question.question_text }}</a>
-                [by: {{ question.user }}] - {{ question.created_date }}
+              Question:  <a href="{% url 'talkingtree:answer' question.id %}"> {{ question.question_text }}</a>
+               <br>
+                <span class="">
+                    [by: {{ question.user }}] - {{ question.created_date }}
+                </span>
             </div>
         </div>
         </li>

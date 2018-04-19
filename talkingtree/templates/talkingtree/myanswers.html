@@ -8,10 +8,12 @@
             {% for answer in all_answer %}
             <li>
             <div class="well">
-                <div class="well row" style="margin-left: 5px">
-                    <h3>{{  answer.answer.user  }}</h3>
-                    <div  class="col-sm-9">
-                        <a href="{% url 'talkingtree:comment' answer.answer.id %}"> {{ answer.answer.answer_text }}</a>
+                <div class="" style="margin-left: 5px">
+
+                    <div  class="">
+                       Question:  <a href="{% url 'talkingtree:answer' answer.answer.question.id %}"> {{ answer.answer.question.question_text }}</a>
+                        <br>
+                       Answer:  <a href="{% url 'talkingtree:comment' answer.answer.question.id answer.answer.id  %}"> {{ answer.answer.answer_text }}</a>
                     </div>
 
                 </div>

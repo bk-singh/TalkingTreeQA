@@ -9,7 +9,7 @@ class Question(models.Model):
         Question model has info about questions posted by user
     '''
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=None)
-    question_text = models.CharField(max_length=200)
+    question_text = models.CharField(max_length=1023)
     created_date = models.DateTimeField(default=datetime.now())
 
     class Meta:
@@ -28,7 +28,7 @@ class Answer(models.Model):
     '''
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=None)
-    answer_text = models.CharField(max_length=200)
+    answer_text = models.CharField(max_length=1023)
     created_date = models.DateTimeField(default=datetime.now())
 
     class Meta:
@@ -41,19 +41,19 @@ class Answer(models.Model):
         return self.answer_text
 
 
-class Upvoteanswer(models.Model):
+class Voteanswer(models.Model):
     '''
         this model has info about all the upvote/downvotes by user on a answer
     '''
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True)
-    upvote = models.NullBooleanField( null=True, blank=True, default=True)
+    vote = models.NullBooleanField( null=True, blank=True, default=True)
 
     class Meta:
-        ordering = ['-upvote']
+        ordering = ['-vote']
 
     def __str__(self):
-        return self.upvote
+        return self.vote
 
 
 class Comment(models.Model):
@@ -62,23 +62,23 @@ class Comment(models.Model):
     '''
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True)
-    comment_text = models.CharField(max_length=200)
+    comment_text = models.CharField(max_length=1023)
     created_date = models.DateTimeField(default=datetime.now())
 
     def __str__(self):
         return self.comment_text
 
 
-class Upvotecomment(models.Model):
+class Votecomment(models.Model):
     '''
         this model has info about all the upvote/downvotes by user on a comment
     '''
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=None)
-    upvote = models.NullBooleanField( null=True, blank=True, default=None)
+    vote = models.NullBooleanField( null=True, blank=True, default=None)
 
     class Meta:
-        ordering = ['-upvote']
+        ordering = ['-vote']
 
     def __str__(self):
-        return self.upvote
+        return self.vote

@@ -11,34 +11,43 @@
     {% endif %}
 
      <h1> List of Questions </h1> [ Ordered by : Most recent first ]
-    <ol>
+    <ul>
         {% for question in all_question %}
         <li>
         <div class="well">
 
         <div class="row" style="margin-left: 5px">
             <div  class="col-sm-12">
-                <a href="{% url 'talkingtree:answer' question.id %}"> {{ question.question_text }}</a>
-                [by: {{ question.user }}] - {{ question.created_date }}
+                <a href="{% url 'talkingtree:answer' question.id %}">
+                <span class="question" style="font-weight:bold;  font-size: 1.5em; color:black">
+                    {{ question.question_text }}
+                </span>
+                </a>
+                <br>
+                <h6>Question requested by: {{ question.user }} on {{ question.created_date }}</h6>
             </div>
         </div>
-            <div class="row">
+            <div class="row"  style="margin: 5px 5px 5px 5px">
             {% if question.user == user %}
-                <div class="col-sm-3">
+                <div class="col-sm-1">
 
                 <form method="POST" action="{% url 'talkingtree:delete-question'  question.id  %}">
                     {% csrf_token %}
-                    <input type="submit" value="Delete Question">
+                    <button class="btn btn-denser btn-xs" type="submit" value="Delete">
+                        <span  class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                    </button>
                 </form>
             </div>
 
-             <div  class="col-sm-3"><a  href="{% url 'talkingtree:update-question' question.id  %}"> Update this Question
+             <div  class="col-sm-2">
+                 <a  href="{% url 'talkingtree:update-question' question.id  %}"  class="btn btn-info btn-xs"> Update
                 <span  class="glyphicon glyphicon-pencil" aria-hidden="true"> </span>
             </a>
             </div>
             {% endif %}
                 {% if user.is_authenticated %}
-                    <div  class="col-sm-3"><a href="{% url 'talkingtree:add-answer' %}"> Answer this Question
+                    <div  class="col-sm-2">
+                        <a href="{% url 'talkingtree:add-answer' question.id %}" role="button"  class="btn btn-info btn-xs"> Answer
                         <span  class="glyphicon glyphicon-pencil" aria-hidden="true"> </span>
                         </a>
                     </div>
@@ -47,6 +56,6 @@
         </div>
         </li>
         {% endfor %}
-    </ol>
+    </ul>
 
  {% endblock %}

@@ -2,29 +2,38 @@
  {%  block title %} Question List {% endblock %}
  {%  block body %}
 
-    <h1> Question: {{ question.question_text }}</h1>
+    <h4> Question: {{ question.question_text }}</h4>
 
 
     {% if all_answer %}
-        <h2> List of Answers:[{{ count_answer }}] </h2>
-        <ol>
+        <h4> List of Answers:[{{ count_answer }}] </h4>
+        <ul>
             {% for answer in all_answer %}
             <li>
-            <div class="well">
+            <div class="well" style="border: 0.5px solid gray;  font-size: 1.2em;  background-color: #eeeeee ">
                 <div class="row">
-                    <div class="" style="margin-left: 5px">
-                        <h3>{{  answer.answer.user  }}</h3>
-                        <div  class="col-sm-9">
-                            <a href="{% url 'talkingtree:comment' answer.answer.id %}"> {{ answer.answer.answer_text }}</a>
+                    <div class="" style="margin-left: 5px; color:black">
+                        <div  class="col-sm-12">
+                            <a href="{% url 'talkingtree:comment' question.id answer.answer.id %}" style="margin-left: 5px; color:black"> {{ answer.answer.answer_text }}</a>
                         </div>
                     </div>
                 </div>
+            <div class="row" style="margin-left: 5px">
+                <h6> Auther: {{  answer.answer.user  }} <br>
+                     Date: {{ answer.answer.created_date }}
+                </h6>
+            </div>
 
                 <div class="row">
                     <div class="col-sm-2">
                         <form action="{% url 'talkingtree:upvotes_answer' answer.answer.id %}" method="post">
                             {% csrf_token %}
-                            <button type="submit">
+                            <button type="submit"
+                                    {% if answer.vote == True %}
+                                        class="btn btn-primary btn-xs"
+                                    {% else %}
+                                        class="btn btn-denser btn-xs"
+                                    {% endif %}>
                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                 . Upvote . {{ answer.count_upvoteanswer }}
                             </button>
@@ -34,31 +43,41 @@
                     <div class="col-sm-2">
                         <form action="{% url 'talkingtree:downvotes_answer' answer.answer.id %}" method="post">
                             {% csrf_token %}
-                            <button type="submit">
+                            <button type="submit"
+                                    {% if answer.vote == False %}
+                                        class="btn btn-primary btn-xs"
+                                    {% else %}
+                                        class="btn btn-denser btn-xs"
+                                    {% endif %}>
                                 <span class="glyphicon glyphicon-arrow-down"></span>
                                 . Downvote . {{ answer.count_downvoteanswer }}
                             </button>
                         </form>
                     </div>
+
                     {% if answer.answer.user == user %}
-                        <div class="col-sm-2">
-                            <form method="POST" action="{% url 'talkingtree:delete-answer'   answer.answer.id  %}">
+                        <div class="col-sm-1">
+                            <form method="POST" action="{% url 'talkingtree:delete-answer' question.id  answer.answer.id  %}">
                                 {% csrf_token %}
-                                <input type="submit" value="Delete Answer">
+                                <button type="submit" class="btn btn-dense btn-xs">
+                                    <span  class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                                </button>
                             </form>
                         </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <div class="row">
-                            <a href="{% url 'talkingtree:update-answer' answer.answer.id  %}">
-                                Update Answer
+                            <a href="{% url 'talkingtree:update-answer' question.id answer.answer.id  %}" class="btn btn-info btn-xs">
+                                Update
+                                <span  class="glyphicon glyphicon-pencil" aria-hidden="true"> </span></a>
                             </a>
                         </div>
                     </div>
                 {% endif %}
 
                 {% if user.is_authenticated %}
-                    <div  class="col-sm-4"><a href="{% url 'talkingtree:add-comment' %}">
-                        comment on this answer
+                    <div  class="col-sm-1">
+                        <a href="{% url 'talkingtree:add-comment' question.id answer.answer.id  %}" class="btn btn-info btn-xs">
+                        Comment
                         <span  class="glyphicon glyphicon-pencil" aria-hidden="true"> </span></a>
                     </div>
                 {% endif %}
@@ -66,7 +85,7 @@
             </div>
             </li>
             {% endfor %}
-        </ol>
+        </ul>
 
         {% else %}
        <div class="alert alert-danger">
@@ -75,7 +94,7 @@
     {% endif %}
              <div class="well row" style="margin-left: 5px">
                  {% if user.is_authenticated %}
-                    <div  class="col-sm-9"><a href="{% url 'talkingtree:add-answer' %}">
+                    <div  class="col-sm-9"><a href="{% url 'talkingtree:add-answer' question.id %}">
                         Answer this question
                         <span  class="glyphicon glyphicon-pencil" aria-hidden="true"> </span></a>
                     </div>

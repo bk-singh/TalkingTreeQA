@@ -1,4 +1,4 @@
-#!/Users/bksingh/Desktop/project/TalkingWebsite/venv/bin/python
+#!/Users/bksingh/Desktop/TalkingTreeQA/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":

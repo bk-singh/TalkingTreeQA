@@ -2,20 +2,54 @@
  {%  block title %} Ask a Question {% endblock %}
  {%  block question_active %} active{% endblock %}
  {%  block body %}
+{#{% if not question %}#}
+{#    <h5> Ask a Question </h5>#}
+{#{% else %}#}
+{#    <h5> Update a Question </h5>#}
+{#{% endif %}#}
 
-    <h3> Ask a Question </h3>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 col-md-7">
+            <div class="col-sm-12 col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form class="form-horizontal" action="" method="post">
                             {% csrf_token %}
+                            <div class="form-group">
+                                    {% if question %}
+                                        <strong style="padding: 5px 5px 5px 5px">
+                                        Question :
+                                        </strong>
+                                        <div class="well">
+                                            {{ question.question_text }}
+                                        </div>
+                                    {% endif %}
+                                {% if answer %}
+                                        <strong style="padding: 5px 5px 5px 5px">
+                                        Answer :
+                                        </strong>
+                                    <div class="well">
+                                    {{ answer.answer_text }}
+                                    </div>
+                                    {% endif %}
+                             {% if comment %}
+                                        <strong style="padding: 5px 5px 5px 5px">
+                                        Comment :
+                                        </strong>
+                                    <div class="well">
+                                    {{ comment.comment_text }}
+                                    </div>
+                                    {% endif %}
+                            </div>
                                 {% include 'talkingtree/form-template.html' %}
                             <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-8">
-                                    <button class="btn btn-success" > Submit Question</button>
+                                <div class="col-sm-offset-3 col-sm-1">
+                                    <button class="btn btn-success" > Submit</button>
                                 </div>
+                                 <div class="col-sm-2">
+                                    <button class="btn btn-primary" onclick="window.history.back();"> Cancel </button>
+                                </div>
+
                             </div>
                         </form>
                     </div>
