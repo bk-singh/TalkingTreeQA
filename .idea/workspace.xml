@@ -2,193 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0d45438-5f6a-4cc4-8926-f93128f9c1e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/talkingtree/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talkingtree/views/answer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talkingtree/views/comment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talkingtree/views/question.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talkingtree/views/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talkingtree/views/voteanswer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talkingtree/views/votecomment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/answer_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/comment_confirm_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TalkingWebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TalkingWebsite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/talkingtree/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/talkingtree/templates/talkingtree/answer.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/answer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/talkingtree/templates/talkingtree/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/templates/talkingtree/comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/comment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/talkingtree/templates/talkingtree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/templates/talkingtree/myanswers.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/myanswers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/templates/talkingtree/myquestions.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/myquestions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/templates/talkingtree/question_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/talkingtree/question_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/talkingtree/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/talkingtree/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/django-admin" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/django-admin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/django-admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/django-admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/Django-1.11.12.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/Django-1.11.12.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/Django-1.11.12.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/Django-1.11.12.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/Django-1.11.12.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/Django-1.11.12.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/Django-1.11.12.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/global_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/global_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/eu/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/eu/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/is/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/is/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/is/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/is/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mk/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mk/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mn/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/mn/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/nl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/nl/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/nl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/nl/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/ro/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/ro/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/ro/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/conf/locale/ro/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/djangojs.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/djangojs.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mk/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mk/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mn/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/mn/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/nl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/nl/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/nl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/nl/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/djangojs.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pl/LC_MESSAGES/djangojs.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pt_BR/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pt_BR/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pt_BR/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/locale/pt_BR/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/templates/admin/widgets/clearable_file_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/templates/admin/widgets/clearable_file_input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admin/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/mk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/mk/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/mk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/mk/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/pl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/admindocs/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/el/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/el/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/el/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/el/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/es_MX/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/es_MX/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/es_MX/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/es_MX/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/ko/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/ko/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/ko/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/ko/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/mk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/mk/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/mk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/mk/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/pt/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/pt/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/pt/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/pt/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/templates/auth/widgets/read_only_password_hash.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/templates/auth/widgets/read_only_password_hash.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/auth/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/contenttypes/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/contenttypes/fields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/contenttypes/management/commands/remove_stale_contenttypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/contenttypes/management/commands/remove_stale_contenttypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/flatpages/locale/eo/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/flatpages/locale/eo/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/flatpages/locale/eo/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/flatpages/locale/eo/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/mysql/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/mysql/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/mysql/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/mysql/features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/mysql/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/mysql/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/oracle/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/oracle/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/oracle/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/oracle/features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/oracle/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/oracle/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/postgis/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/postgis/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/postgis/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/postgis/features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/postgis/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/postgis/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/spatialite/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/spatialite/features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/spatialite/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/db/backends/spatialite/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/forms/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/forms/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/gdal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/gdal/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/gdal/libgdal.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/gdal/libgdal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/geoip/prototypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/geoip/prototypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/geos/libgeos.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/geos/libgeos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/locale/pl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/management/commands/inspectdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/management/commands/inspectdb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/serializers/geojson.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/serializers/geojson.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/gis/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/humanize/locale/es_AR/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/humanize/locale/es_AR/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/humanize/locale/es_AR/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/humanize/locale/es_AR/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/messages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/messages/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/fields/citext.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/fields/citext.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/forms/array.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/forms/array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/indexes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/indexes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/jinja2/postgres/widgets/split_array.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/mk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/mk/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/mk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/mk/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/nl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/nl/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/nl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/nl/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/ru/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/ru/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/postgres/templates/postgres/widgets/split_array.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/signed_cookies.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/signed_cookies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/staticfiles/management/commands/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/contrib/staticfiles/management/commands/runserver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/cache/backends/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/cache/backends/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/files/move.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/files/move.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/mail/backends/filebased.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/mail/backends/filebased.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/mail/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/mail/message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/management/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/management/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/management/commands/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/management/commands/runserver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/management/commands/shell.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/management/commands/shell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/paginator.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/paginator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/serializers/json.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/core/serializers/json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/base/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/base/schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/oracle/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/oracle/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/oracle/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/oracle/creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/oracle/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/oracle/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/postgresql/introspection.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/postgresql/introspection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/postgresql/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/postgresql/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/backends/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/migrations/operations/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/migrations/operations/fields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/migrations/operations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/migrations/operations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/migrations/operations/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/migrations/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/migrations/state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/deletion.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/deletion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/expressions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/expressions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/files.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/related_lookups.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/related_lookups.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/indexes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/indexes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/sql/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/sql/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/transaction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/boundfield.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/boundfield.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/fields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/formsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/formsets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/jinja2/django/forms/widgets/clearable_file_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/jinja2/django/forms/widgets/clearable_file_input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/jinja2/django/forms/widgets/multiple_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/jinja2/django/forms/widgets/multiple_input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/jinja2/django/forms/widgets/multiwidget.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/jinja2/django/forms/widgets/multiwidget.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/attrs.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/attrs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/clearable_file_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/clearable_file_input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/multiple_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/multiple_input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/multiwidget.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/multiwidget.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/select_option.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/select_option.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/forms/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/middleware/csrf.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/middleware/csrf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/template/defaultfilters.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/template/defaultfilters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/test/testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/test/testcases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/autoreload.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/autoreload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/functional.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/functional.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/html.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/html.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/http.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/utils/text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/generic/dates.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/generic/dates.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/generic/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/generic/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/static.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/views/static.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/talkingtree/views/answer.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/answer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/talkingtree/views/comment.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/comment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/talkingtree/views/question.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/question.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -202,14 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talkingtree/models.py">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talkingtree/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="31" column="16" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="16" />
+            <state relative-caret-position="90">
+              <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#24#63#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/talkingtree/views/question.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -217,8 +53,21 @@
       <file leaf-file-name="answer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/views/answer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+            <state relative-caret-position="228">
+              <caret line="85" selection-start-line="85" selection-end-line="86" />
+              <folding>
+                <element signature="e#0#84#0" expanded="true" />
+                <element signature="e#4350#5082#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talkingtree/views/user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#0#84#0" expanded="true" />
               </folding>
@@ -229,8 +78,7 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="20" />
+            <state>
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -238,41 +86,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/comment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="47" selection-start-line="30" selection-start-column="49" selection-end-line="35" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talkingtree/views/comment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="111" column="17" selection-start-line="92" selection-start-column="12" selection-end-line="111" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="question_form.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/question_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="voteanswer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/views/voteanswer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="64" selection-start-column="64" selection-end-column="64" />
+            <state relative-caret-position="438">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -280,23 +101,8 @@
       <file leaf-file-name="votecomment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/views/votecomment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="answer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/answer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -304,8 +110,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="39" column="93" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="93" />
+            <state relative-caret-position="452">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="32" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -319,6 +125,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -338,6 +145,9 @@
       <find>Delete</find>
       <find>upvote</find>
       <find>user</find>
+      <find>all_question</find>
+      <find>client</find>
+      <find>self.client.post(</find>
     </findStrings>
     <replaceStrings>
       <replace>voteanswer</replace>
@@ -352,22 +162,26 @@
       <list>
         <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/myanswers.html" />
         <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/myquestions.html" />
-        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/base.html" />
-        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/index.html" />
-        <option value="$PROJECT_DIR$/talkingtree/models.py" />
         <option value="$PROJECT_DIR$/talkingtree/views.py" />
         <option value="$PROJECT_DIR$/talkingtree/views/views.py" />
         <option value="$PROJECT_DIR$/talkingtree/views/user.py" />
-        <option value="$PROJECT_DIR$/talkingtree/views/question.py" />
         <option value="$PROJECT_DIR$/talkingtree/views/voteanswer.py" />
         <option value="$PROJECT_DIR$/talkingtree/forms.py" />
-        <option value="$PROJECT_DIR$/talkingtree/urls.py" />
         <option value="$PROJECT_DIR$/talkingtree/views/votecomment.py" />
-        <option value="$PROJECT_DIR$/talkingtree/views/comment.py" />
         <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/comment.html" />
-        <option value="$PROJECT_DIR$/talkingtree/views/answer.py" />
-        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/answer.html" />
         <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/question_form.html" />
+        <option value="$PROJECT_DIR$/talkingtree/models.py" />
+        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/answer.html" />
+        <option value="$PROJECT_DIR$/talkingtree/views/answer.py" />
+        <option value="$PROJECT_DIR$/talkingtree/views/comment.py" />
+        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/index.html" />
+        <option value="$PROJECT_DIR$/TalkingWebsite/settings.py" />
+        <option value="$PROJECT_DIR$/talkingtree/urls.py" />
+        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/base.html" />
+        <option value="$PROJECT_DIR$/talkingtree/views/question.py" />
+        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/answer_confirm_delete.html" />
+        <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/comment_confirm_delete.html" />
+        <option value="$PROJECT_DIR$/talkingtree/tests.py" />
       </list>
     </option>
   </component>
@@ -377,10 +191,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1520" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="821" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -409,7 +224,26 @@
               <item name="TalkingTreeQA" type="b2602c69:ProjectViewProjectNode" />
               <item name="TalkingTreeQA" type="462c0819:PsiDirectoryNode" />
               <item name="talkingtree" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TalkingTreeQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TalkingTreeQA" type="462c0819:PsiDirectoryNode" />
+              <item name="talkingtree" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="talkingtree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TalkingTreeQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TalkingTreeQA" type="462c0819:PsiDirectoryNode" />
+              <item name="talkingtree" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TalkingTreeQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TalkingTreeQA" type="462c0819:PsiDirectoryNode" />
+              <item name="TalkingWebsite" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,6 +253,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -479,7 +314,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="821" extended-state="0" />
+    <frame x="1520" y="23" width="1440" height="825" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -488,13 +323,13 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.28314918" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8612717" visible="true" weight="0.18025751" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18681319" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8462838" visible="true" weight="0.29899856" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.13872832" side_tool="true" visible="true" weight="0.18025751" />
+      <window_info id="Favorites" order="2" sideWeight="0.15371622" side_tool="true" visible="true" weight="0.29899856" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -511,7 +346,22 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/talkingtree/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -577,12 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
           <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,11 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,13 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -720,9 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -730,25 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="95" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="95" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,71 +570,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/views/views.py" />
-    <entry file="file://$PROJECT_DIR$/talkingtree/views/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/views/question.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#84#0" expanded="true" />
-            <element signature="e#870#1038#0" />
-            <element signature="e#1073#1690#0" />
-            <element signature="e#1729#2470#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/views/voteanswer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="64" selection-start-column="64" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" column="93" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/views/votecomment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/views/comment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="111" column="17" selection-start-line="92" selection-start-column="12" selection-end-line="111" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -838,43 +587,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/views/answer.py">
+    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/question_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#84#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="123">
+          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project/TalkingWebsite/venv/lib/python2.7/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="16" />
+        <state relative-caret-position="15">
+          <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="204" column="23" lean-forward="true" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/answer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="244">
+          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/views/comment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TalkingWebsite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="124" column="23" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="36" column="112" selection-start-line="36" selection-start-column="112" selection-end-line="36" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/question_form.html">
+    <entry file="file://$PROJECT_DIR$/talkingtree/views/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        <state relative-caret-position="231">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/question_confirm_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="true" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/answer_confirm_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="true" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/templates/talkingtree/comment_confirm_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/views/voteanswer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/views/answer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="85" selection-start-line="85" selection-end-line="86" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+            <element signature="e#4350#5082#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/views/votecomment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/views/question.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
         </state>
       </provider>
     </entry>

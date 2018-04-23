@@ -90,8 +90,10 @@ def comment(request, question_id, answer_id):
         for comment in comments:
             count_votecomment = Votecomment.objects.filter(vote=True, comment=comment).count()
             count_downvotecomment = Votecomment.objects.filter(vote=False, comment=comment).count()
-            count_uservotecomment = Votecomment.objects.filter(user=request.user, comment=comment).count()
-            if(count_uservotecomment > 0):
+            count_uservotecomment = None
+            if request.user.is_authenticated:
+                count_uservotecomment = Votecomment.objects.filter(user=request.user, comment=comment).count()
+            if count_uservotecomment > 0:
                 votecomment = Votecomment.objects.filter(user=request.user, comment=comment).first()
                 comments_list.append(
                     {

@@ -19,13 +19,6 @@ class AnswerView(generic.ListView):
     def get_queryset(self):
         return Answer.objects.all()
 
-#
-# class AnswerCreate(CreateView):
-#     model = Answer
-#     fields = ['question', 'user', 'answer_text']
-#     success_url = reverse_lazy('talkingtree:question')
-#
-
 
 class AnswerCreate(View):
     template_name = 'talkingtree/question_form.html'
@@ -92,7 +85,9 @@ def answer(request, question_id):
         for answer in answers:
             count_upvote = Voteanswer.objects.filter(vote=True, answer=answer).count()
             count_downvote = Voteanswer.objects.filter(vote=False, answer=answer).count()
-            count_uservote = Voteanswer.objects.filter(user=request.user, answer=answer).count()
+            count_uservote = None
+            if request.user.is_authenticated:
+                count_uservote = Voteanswer.objects.filter(user=request.user, answer=answer).count()
             if count_uservote > 0:
                 uservote = Voteanswer.objects.filter(user=request.user, answer=answer).first()
                 answers_list.append({

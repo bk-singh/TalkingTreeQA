@@ -55,7 +55,7 @@
                         </form>
                     </div>
 
-                    {% if answer.answer.user == user %}
+                    {% if  user.is_authenticated and answer.answer.user == user %}
                         <div class="col-sm-1">
                             <form method="POST" action="{% url 'talkingtree:delete-answer' question.id  answer.answer.id  %}">
                                 {% csrf_token %}

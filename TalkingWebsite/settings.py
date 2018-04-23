@@ -123,6 +123,5 @@ STATIC_URL = '/static/'
 
 # redirect on login
 LOGIN_REDIRECT_URL = '/'
-
  # redirect to after logout
 LOGOUT_REDIRECT_URL = '/'

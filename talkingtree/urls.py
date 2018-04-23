@@ -21,6 +21,7 @@ urlpatterns = [
 
     url(r'^$', question.QuestionView.as_view(), name='question'),
     url(r'^myquestions/$', question.myquestions, name='myquestions'),
+    url(r'^searchquestions/$', question.searchquestions, name='searchquestions'),
     url(r'^question/add/$', question.QuestionCreate.as_view(), name='add-question'),
     url(r'^questions/(?P<pk>[0-9]+)/update$', question.QuestionUpdate.as_view(), name='update-question'),
     url(r'^questions/(?P<pk>[0-9]+)/delete/$', question.QuestionDelete.as_view(), name='delete-question'),

@@ -10,9 +10,18 @@
      </div>
     {% endif %}
 
-     <h1> List of Questions </h1> [ Ordered by : Most recent first ]
+     {% if is_search_result == True %}
+        <h3> Search result </h3> Search result : {{ count_questions }} [ Ordered by : Most recent first ]
+         {% if count_questions == 0 %}
+             <div class="well">
+                    No search result found. Please change your search keyword and try again.
+             </div>
+          {% endif %}
+     {% else %}
+         <h3> List of Questions </h3> [ Ordered by : Most recent first ]
+     {% endif %}
     <ul>
-        {% for question in all_question %}
+        {% for question in questions %}
         <li>
         <div class="well">
 

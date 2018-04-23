@@ -22,6 +22,18 @@ class Question(models.Model):
         return self.question_text
 
 
+# only for  test
+    def __unicode__(self):
+        return self.question_text
+
+
+
+
+
+
+
+
+
 class Answer(models.Model):
     '''
         Answer model has info about answers posted by user
@@ -35,10 +47,10 @@ class Answer(models.Model):
         ordering = ['-id']
 
     def get_absolute_url(self):
-        return reverse('talkingtree:answer', kwargs={'pk':self.pk})
+        return reverse('talkingtree:answer', kwargs={'question_id':self.question.id})
 
     def __str__(self):
-        return self.answer_text
+        return str(self.id) +'-->'+self.answer_text
 
 
 class Voteanswer(models.Model):

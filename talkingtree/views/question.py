@@ -14,7 +14,7 @@ from django.views.generic.edit import FormView
 
 class QuestionView(generic.ListView):
     template_name = 'talkingtree/index.html'
-    context_object_name = 'all_question'
+    context_object_name = 'questions'
     paginate_by = 5
 
     def get_queryset(self):
@@ -68,7 +68,6 @@ class QuestionDelete(DeleteView):
     success_url = reverse_lazy('talkingtree:question')
 
 
-
 @login_required
 def myquestions(request):
     try:
@@ -79,4 +78,15 @@ def myquestions(request):
         raise Http404('Answer Does not Exist.')
     return render(request, 'talkingtree/myquestions.html', {
        'all_questions': questions, 'count_question': count_question,})
+
+
+def searchquestions(request):
+    try:
+        search_text = request.GET.get('q')
+        questions = Question.objects.filter(question_text__contains=search_text)
+
+    except Question.DoesNotExist:
+        raise Http404('Answer Does not Exist.')
+    return render(request, 'talkingtree/index.html', {
+       'questions': questions, 'is_search_result': True, 'count_questions':questions.count()})
 

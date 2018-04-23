@@ -33,8 +33,8 @@
          {% endif %}
 
         </ul>
-          <form class="navbar-form navbar-left" role="search" method="get" action="#">
-            <input type="text" class="form-control" name = "q" value="" placeholder="search a question">
+          <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'talkingtree:searchquestions' %}">
+            <input type="text" class="form-control" name = "q" value="" placeholder="search a question" required>
              <button class="form-control btn btn-info" name = "searchBtn" >Search Question
              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
              </button>
@@ -81,11 +81,10 @@
 
 
               <li></li>
-
           </ul>
       </div>
     </nav>
-    <div style="margin: 5px 250px 250px 250px">
+    <div style="margin: 5px 250px 250px 250px;">
         {% block body %}
         {% endblock %}
 
