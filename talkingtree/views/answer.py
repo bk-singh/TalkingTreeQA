@@ -11,14 +11,14 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import FormView
 
 
-class AnswerView(generic.ListView):
-    template_name = 'talkingtree/index.html'
-    context_object_name = 'all_answer'
-    paginate_by = 5
-
-    def get_queryset(self):
-        return Answer.objects.all()
-
+# class AnswerView(generic.ListView):
+#     template_name = 'talkingtree/index.html'
+#     context_object_name = 'all_answer'
+#     paginate_by = 5
+#
+#     def get_queryset(self):
+#         return Answer.objects.all()
+#
 
 class AnswerCreate(View):
     template_name = 'talkingtree/question_form.html'
@@ -36,7 +36,7 @@ class AnswerCreate(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             que = Question.objects.get(pk=question_id)
-            answer = Answer.objects.create(user=request.user, question=que, answer_text=form.cleaned_data['answer'])
+            answer = Answer(user=request.user, question=que, answer_text=form.cleaned_data['answer'])
             answer.save()
         return redirect('talkingtree:answer', question_id)
 
@@ -67,13 +67,6 @@ class AnswerUpdate(FormView):
             answer.answer_text = form.cleaned_data['answer']
             answer.save()
         return redirect('talkingtree:answer', question_id)
-
-
-#
-# class AnswerUpdate(UpdateView):
-#     model = Answer
-#     fields = ['question', 'user', 'answer_text']
-#     success_url = reverse_lazy('talkingtree:question')
 
 
 def answer(request, question_id):

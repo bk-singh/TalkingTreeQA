@@ -2,6 +2,7 @@
      {%  block title %} Login to TalkingTree {% endblock %}
      {%  block question_active %} active{% endblock %}
      {%  block body %}
+
          {% if user.is_authenticated %}
              <div class="panel panel-default">
              <div class="panel-body">
@@ -14,6 +15,8 @@
              </div>
              </div>
          {% else %}
+
+
              <div class="panel panel-default">
                  <div class="panel-body">
                      <h2>Login</h2>

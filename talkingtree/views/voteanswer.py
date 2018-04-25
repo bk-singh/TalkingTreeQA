@@ -11,14 +11,10 @@ def create_voteanswer(request, answer_id):
     try:
         question = Question.objects.get(answer__id=answer_id)
         voteanswer = Voteanswer.objects.get(user = user, answer=answer)
-        if(voteanswer.vote == True):
-            voteanswer.vote = None
-        else:
-            voteanswer.vote = True
-        voteanswer.save()
     except Voteanswer.DoesNotExist:
-        voteanswer = Voteanswer(vote=True, user = user, answer=answer)
-        voteanswer.save()
+        voteanswer = Voteanswer(vote=None, user = user, answer=answer)
+    finally:
+        voteanswer.save_vote(True)
     return redirect('talkingtree:answer', question.id)
 
 
@@ -29,12 +25,8 @@ def create_downvoteanswer(request, answer_id):
     try:
         question = Question.objects.get(answer__id=answer_id)
         voteanswer = Voteanswer.objects.get(user = user, answer=answer)
-        if(voteanswer.vote == False):
-            voteanswer.vote = None
-        else:
-            voteanswer.vote = False
-        voteanswer.save()
     except Voteanswer.DoesNotExist:
-        voteanswer = Voteanswer(vote=False, user = user, answer=answer)
-        voteanswer.save()
+        voteanswer = Voteanswer(vote=None, user = user, answer=answer)
+    finally:
+        voteanswer.save_vote(False)
     return redirect('talkingtree:answer', question.id)

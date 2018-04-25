@@ -10,8 +10,6 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import FormView
 
 
-
-
 class QuestionView(generic.ListView):
     template_name = 'talkingtree/index.html'
     context_object_name = 'questions'
@@ -64,7 +62,7 @@ class QuestionUpdate(FormView):
 
 class QuestionDelete(DeleteView):
     model = Question
-    fields = ['user','question_text']
+    fields = ['user', 'question_text']
     success_url = reverse_lazy('talkingtree:question')
 
 

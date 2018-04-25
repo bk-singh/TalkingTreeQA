@@ -1,14 +1,13 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 
+from __future__ import unicode_literals
 from django.test import TestCase, Client, RequestFactory
 from talkingtree.models import Question, Answer, Comment, Voteanswer, Votecomment
 from django.contrib.auth.models import User, AnonymousUser
 from datetime import datetime
-# from django.shortcuts import reverse
 from django.core.urlresolvers import reverse
 from talkingtree.views import user, question, answer, voteanswer, comment, votecomment
-from django.contrib.auth import views as auth_views
+# from django.contrib.auth import views as auth_views
+# from django.shortcuts import reverse
 
 # import pytest
 
@@ -42,16 +41,21 @@ class QuestionTest(TestCase):
         self.user = create_user('test', 'test@gmail.com', 'test')
 
     def test_question_creation(self):
-        q = create_question("How can I fly over the mountain?", self.user);
-        self.assertTrue(isinstance(q, Question))
-        self.assertEqual(q.__unicode__(), q.question_text)
-
-    def test_question_view(self):
-        q = create_question("How can I fly over the mountain?", self.user);
-        url = reverse('talkingtree:question')
+        ''' Test updating a question. '''
+        # q = create_question("How can I fly over the mountain?", self.user);
+        url = reverse('talkingtree:add-question')
+        self.client.login(username='test', password='test')
         resp = self.client.get(url)
-        self.assertEqual(resp.status_code, 200)
-        self.assertIn(q.question_text, resp.content)
+        form = {'question':"What is Airport??"}
+        resp1 = self.client.post(url, form)
+
+        q1 = Question.objects.all().first()
+        url = reverse('talkingtree:question')
+        resp2 = self.client.get(url)
+
+        self.assertEqual(form['question'], q1.question_text)
+        self.assertEqual(resp1.status_code, 302)
+        self.assertIn(q1.question_text, resp2.content)
 
     def test_question_view_allowed_anonymous_user(self):
         q = create_question("How can I fly over the mountain?", self.user);
@@ -301,6 +305,34 @@ class AnswervoteTest(TestCase):
         self.assertEqual(resp.status_code, 302)
         self.assertEqual(count_downvote, 1)
 
+    def test_upvote_answer_model(self):
+        ''' Test Voteanswer model '''
+        q = create_question("How can I fly over the mountain?", self.user);
+        a = create_answer("You can use Parachute or Aeroplane.", q, self.user);
+        c = create_comment("I cannot buy an Aeroplane. ", a, self.user)
+        avote = Voteanswer(vote=None, user=self.user, answer=a)
+
+        vote = avote.save_vote(True)
+        assert vote == True
+        count_upvote = Voteanswer.objects.filter(vote=True, answer=a).count()
+        self.assertEqual(count_upvote, 1)
+
+        vote = avote.save_vote(True)
+        assert vote == None
+        count_upvote = Voteanswer.objects.filter(vote=True, answer=a).count()
+        self.assertEqual(count_upvote, 0)
+
+        vote = avote.save_vote(False)
+        assert vote == False
+        count_downvote = Voteanswer.objects.filter(vote=False, answer=a).count()
+        self.assertEqual(count_downvote, 1)
+
+        vote = avote.save_vote(False)
+        assert vote == None
+        count_downvote = Voteanswer.objects.filter(vote=False, answer=a).count()
+        self.assertEqual(count_downvote, 0)
+
+
 
 class CommentvoteTest(TestCase):
     def setUp(self):
@@ -336,5 +368,34 @@ class CommentvoteTest(TestCase):
         count_downvote = Votecomment.objects.filter(vote=False, comment=c).count()
         self.assertEqual(resp.status_code, 302)
         self.assertEqual(count_downvote, 0)
+
+
+
+    def test_upvote_comment_model(self):
+        ''' Test Votecomment model '''
+        q = create_question("How can I fly over the mountain?", self.user);
+        a = create_answer("You can use Parachute or Aeroplane.", q, self.user);
+        c = create_comment("I cannot by an Aeroplane. ", a, self.user)
+        cvote = Votecomment(vote=None, user=self.user, comment=c)
+
+        vote = cvote.save_vote(True)
+        assert vote == True
+        count_upvote = Votecomment.objects.filter(vote=True, comment=c).count()
+        self.assertEqual(count_upvote, 1)
+
+        vote = cvote.save_vote(True)
+        assert vote == None
+        count_upvote = Votecomment.objects.filter(vote=True, comment=c).count()
+        self.assertEqual(count_upvote, 0)
+
+        vote = cvote.save_vote(False)
+        assert vote == False
+        count_upvote = Votecomment.objects.filter(vote=False, comment=c).count()
+        self.assertEqual(count_upvote, 1)
+
+        vote = cvote.save_vote(False)
+        assert vote == None
+        count_upvote = Votecomment.objects.filter(vote=False, comment=c).count()
+        self.assertEqual(count_upvote, 0)
 
 

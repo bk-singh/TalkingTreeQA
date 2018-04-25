@@ -2,6 +2,7 @@ from django.db import models
 from django.core.urlresolvers import reverse, reverse_lazy
 from datetime import datetime
 from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
 
 
 class Question(models.Model):
@@ -21,17 +22,9 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
 
-
-# only for  test
+    # only for  test
     def __unicode__(self):
         return self.question_text
-
-
-
-
-
-
-
 
 
 class Answer(models.Model):
@@ -67,6 +60,14 @@ class Voteanswer(models.Model):
     def __str__(self):
         return self.vote
 
+    def save_vote(self, choice):
+        if self.vote == choice:
+            self.vote = None
+        else:
+            self.vote = choice
+        self.save()
+        return self.vote
+
 
 class Comment(models.Model):
     '''
@@ -94,3 +95,13 @@ class Votecomment(models.Model):
 
     def __str__(self):
         return self.vote
+
+    def save_vote(self, choice):
+        if self.vote == choice:
+            self.vote = None
+        else:
+            self.vote = choice
+        self.save()
+        return self.vote
+
+
