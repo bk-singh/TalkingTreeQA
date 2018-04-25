@@ -14,3 +14,5 @@ TalkingTree is a place to share knowledge and better understand the world. You c
 # How to run the server?
  - python manage.py runserver 0.0.0.0:8000
  - open the browser and type localhost:8000 in your address bar and hit Enter
+
+# I will add more information soon.
