@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0d45438-5f6a-4cc4-8926-f93128f9c1e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/talkingtree/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/views/answer.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/answer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/views/question.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/question.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/views/voteanswer.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/voteanswer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/views/votecomment.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/votecomment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="answer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="answer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/views/answer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="552">
@@ -74,6 +64,15 @@
                 <element signature="e#2852#4303#0" />
                 <element signature="e#4187#4919#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -180,6 +179,7 @@
         <option value="$PROJECT_DIR$/talkingtree/tests/tests.py" />
         <option value="$PROJECT_DIR$/talkingtree/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/talkingtree/views/answer.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -285,8 +285,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.23757575" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8277512" visible="true" weight="0.14569962" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.23757575" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8277512" visible="true" weight="0.14569962" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -337,13 +337,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/talkingtree/views/comment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="111" column="17" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="111" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/views/voteanswer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -734,6 +727,13 @@
             <element signature="e#2852#4303#0" />
             <element signature="e#4187#4919#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
