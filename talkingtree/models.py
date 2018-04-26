@@ -1,17 +1,19 @@
 from django.db import models
 from django.core.urlresolvers import reverse, reverse_lazy
-from datetime import datetime
+# from datetime import datetime
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
+from django.utils import timezone
+
 
 
 class Question(models.Model):
     '''
         Question model has info about questions posted by user
     '''
-    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=None)
-    question_text = models.CharField(max_length=1023)
-    created_date = models.DateTimeField(default=datetime.now())
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    question_text = models.CharField(null=False, max_length=1023)
+    created_date = models.DateTimeField(default=timezone.now())
 
     class Meta:
         ordering = ['-id']
@@ -22,7 +24,6 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
 
-    # only for  test
     def __unicode__(self):
         return self.question_text
 
@@ -34,7 +35,7 @@ class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=None)
     answer_text = models.CharField(max_length=1023)
-    created_date = models.DateTimeField(default=datetime.now())
+    created_date = models.DateTimeField(default=timezone.now())
 
     class Meta:
         ordering = ['-id']
@@ -75,8 +76,8 @@ class Comment(models.Model):
     '''
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True)
-    comment_text = models.CharField(max_length=1023)
-    created_date = models.DateTimeField(default=datetime.now())
+    comment_text = models.CharField(null=False, blank=False, max_length=1023)
+    created_date = models.DateTimeField(default=timezone.now())
 
     def __str__(self):
         return self.comment_text
