@@ -22,6 +22,14 @@ $ python manage.py runserver 0.0.0.0:8000
 ```
 Open the browser and go to `127.0.0.1:8000`
 
+
+
+## Test web application
+
+```
+$ pytest
+```
+
 ### Django Resources
 
 I used these for help:
