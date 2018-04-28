@@ -5,7 +5,7 @@ TalkingTree is a place to share knowledge and better understand the world. You c
 Download the source code by using git:
 
 ```
-git clone https://github.com/amitsaha/til.git
+https://github.com/bk-singh/TalkingTreeQA.git
 ```
 
 ## Model Setup
