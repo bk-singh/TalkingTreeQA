@@ -1,18 +1,38 @@
 # What is TalkingTreeQA?
 TalkingTree is a place to share knowledge and better understand the world. You can ask a question and you can give answer to others questions and you can also comment on an answer.
 
-# Dependencies for web app to be installed:
-- Django==1.11
-- pytz==2018.3
+
+Download the source code by using git:
+
+```
+git clone https://github.com/amitsaha/til.git
+```
+
+## Model Setup
+
+```
+$ pip install -r requirements.txt
+$ python manage.py migrate
+```
+
+## Start web application
+
+```
+$ python manage.py runserver 0.0.0.0:8000
+```
+Open the browser and go to `127.0.0.1:8000`
+
+### Django Resources
+
+I used these for help:
+
+- https://docs.djangoproject.com/en/1.11
+- http://www.janosgyerik.com/django-authenticationform-gotchas/
+- https://django-bootstrap3.readthedocs.io/en/latest/quickstart.html#example-template
 
 
-# Dependencies for unit testing to be installed:
-- pytest-django==3.2.1
-- pytest==2.9
+## Web application Resources
 
-
-# How to run the server?
- - python manage.py runserver 0.0.0.0:8000
- - open the browser and type localhost:8000 in your address bar and hit Enter
-
-# I will add more information soon.
+- [A typical HTTP session](https://developer.mozilla.org/en-US/docs/Web/HTTP/Session)
+- [HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+- [HTTP Compression](https://developer.mozilla.org/en-US/docs/Web/HTTP/Compression)
