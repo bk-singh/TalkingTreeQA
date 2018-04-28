@@ -1,8 +1,6 @@
 from django.db import models
-from django.core.urlresolvers import reverse, reverse_lazy
-# from datetime import datetime
+from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404
 from django.utils import timezone
 
 
@@ -27,6 +25,9 @@ class Question(models.Model):
     def __unicode__(self):
         return self.question_text
 
+    def search(self, search_text):
+        return Question.objects.filter(question_text__contains=search_text)
+
 
 class Answer(models.Model):
     '''
@@ -44,7 +45,7 @@ class Answer(models.Model):
         return reverse('talkingtree:answer', kwargs={'question_id':self.question.id})
 
     def __str__(self):
-        return str(self.id) +'-->'+self.answer_text
+        return self.answer_text
 
 
 class Voteanswer(models.Model):
@@ -104,5 +105,3 @@ class Votecomment(models.Model):
             self.vote = choice
         self.save()
         return self.vote
-
-

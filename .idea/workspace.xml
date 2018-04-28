@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0d45438-5f6a-4cc4-8926-f93128f9c1e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/talkingtree/tests/integrationtst.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0002_auto_20180411_1923.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0003_auto_20180411_1929.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0004_auto_20180411_1930.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0005_auto_20180411_1932.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0006_auto_20180411_1933.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0007_auto_20180411_1959.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0008_auto_20180411_2001.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0009_auto_20180412_0512.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0010_auto_20180412_0730.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0011_auto_20180412_0758.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0012_auto_20180412_0852.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0013_auto_20180412_0954.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0014_auto_20180412_1033.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0015_auto_20180413_0643.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0016_auto_20180413_0644.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0017_auto_20180413_0656.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0018_auto_20180417_0943.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0019_auto_20180417_1102.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/migrations/0020_auto_20180417_1119.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/talkingtree/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/talkingtree/tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/tests/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talkingtree/views/voteanswer.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/voteanswer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/talkingtree/views/question.py" beforeDir="false" afterPath="$PROJECT_DIR$/talkingtree/views/question.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,8 +22,8 @@
       <file leaf-file-name="question.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/views/question.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="564">
+              <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
               <folding>
                 <element signature="e#0#84#0" expanded="true" />
               </folding>
@@ -56,8 +34,8 @@
       <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/talkingtree/tests/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="90">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -80,8 +58,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkingtree/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="63" column="32" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+            <state relative-caret-position="240">
+              <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -160,7 +138,6 @@
       <find>upvotecomment</find>
       <find>vote</find>
       <find>all_</find>
-      <find>delete</find>
       <find>Delete</find>
       <find>upvote</find>
       <find>user</find>
@@ -169,6 +146,7 @@
       <find>self.client.post(</find>
       <find>datetime</find>
       <find>answer=a).count()</find>
+      <find>delete</find>
     </findStrings>
     <replaceStrings>
       <replace>voteanswer</replace>
@@ -201,14 +179,14 @@
         <option value="$PROJECT_DIR$/talkingtree/templates/talkingtree/comment_confirm_delete.html" />
         <option value="$PROJECT_DIR$/talkingtree/tests.py" />
         <option value="$PROJECT_DIR$/talkingtree/tests/conftest.py" />
-        <option value="$PROJECT_DIR$/talkingtree/views/question.py" />
         <option value="$PROJECT_DIR$/talkingtree/views/votecomment.py" />
         <option value="$PROJECT_DIR$/talkingtree/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/talkingtree/views/answer.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/talkingtree/tests/integration_tests.py" />
-        <option value="$PROJECT_DIR$/talkingtree/models.py" />
         <option value="$PROJECT_DIR$/talkingtree/views/voteanswer.py" />
+        <option value="$PROJECT_DIR$/talkingtree/views/question.py" />
+        <option value="$PROJECT_DIR$/talkingtree/models.py" />
         <option value="$PROJECT_DIR$/talkingtree/tests/tests.py" />
       </list>
     </option>
@@ -220,8 +198,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1440" />
-    <option name="width" value="1600" />
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -323,8 +300,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="0" width="1600" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" weight="0.8484849" />
@@ -332,13 +308,13 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.2678788" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83774835" visible="true" weight="0.13029525" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.7430303" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6603774" visible="true" weight="0.14520743" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.16225165" side_tool="true" visible="true" weight="0.13029525" />
+      <window_info id="Favorites" order="2" sideWeight="0.33962265" side_tool="true" visible="true" weight="0.14520743" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -716,16 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talkingtree/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="63" column="32" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/views/votecomment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -766,18 +732,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/views/question.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="564">
+          <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/talkingtree/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/talkingtree/tests/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

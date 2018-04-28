@@ -71,7 +71,6 @@ def myquestions(request):
     try:
         questions = Question.objects.filter(user=request.user)
         count_question= questions.count()
-
     except Question.DoesNotExist:
         raise Http404('Answer Does not Exist.')
     return render(request, 'talkingtree/myquestions.html', {
@@ -81,8 +80,8 @@ def myquestions(request):
 def searchquestions(request):
     try:
         search_text = request.GET.get('q')
-        questions = Question.objects.filter(question_text__contains=search_text)
-
+        que = Question()
+        questions = que.search(search_text=search_text)
     except Question.DoesNotExist:
         raise Http404('Answer Does not Exist.')
     return render(request, 'talkingtree/index.html', {
